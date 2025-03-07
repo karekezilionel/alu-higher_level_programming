@@ -1,3 +1,9 @@
 #!/usr/bin/python3
-def multiply_list_map(my_list=[], number=0):
-    return list(map(lambda num: num * number, my_list))
+def delete_at(my_list=[], idx=0):
+    if idx < 0:
+        return my_list
+    elif idx >= len(my_list):
+        return my_list
+    else:
+        my_list.remove(my_list[idx])
+        return my_list

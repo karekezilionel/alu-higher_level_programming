@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    list = my_list.copy()
-    if not my_list:
-        return list
-    for item in range(len(my_list)):
-        if list[item] == search:
-            list[item] = replace
-    return list
+def element_at(my_list, idx):
+    if idx < 0:
+        return None
+    elif idx >= len(my_list):
+        return None
+    else:
+        return my_list[idx]

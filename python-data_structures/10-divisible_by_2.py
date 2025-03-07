@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-def best_score(a_dictionary):
-    if not a_dictionary:
-        return None
-    value1 = list(a_dictionary.items())[0][1]
-    key1 = list(a_dictionary.items())[0][0]
-
-    for key, value in a_dictionary.items():
-        if value > value1:
-            value1 = value
-            key1 = key
-    return key1
+def divisible_by_2(my_list=[]):
+    d = []
+    for j in my_list:
+        if j % 2 == 0:
+            d.append(True)
+        else:
+            d.append(False)
+    return d

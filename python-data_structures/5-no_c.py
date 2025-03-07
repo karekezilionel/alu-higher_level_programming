@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-def number_keys(a_dictionary):
-    keys = 0
-    for key, value in a_dictionary.items():
-        keys += 1
-    return int(keys)
+def no_c(my_string):
+    my_string = my_string.translate({ord("c"): None})
+    my_string = my_string.translate({ord("C"): None})
+    return my_string
