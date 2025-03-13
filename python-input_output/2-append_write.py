@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """defining append_write function"""
 
 
