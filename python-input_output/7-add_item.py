@@ -8,10 +8,10 @@ import sys
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 load_from_json_file = __import__("6-load_from_json_file").load_from_file
 
-arglist - list(sys.argv[1:])
+arglist = list(sys.argv[1:])
 
 try:
-    old_data = laod_from_json_file("add_item.json")
+    old_data = load_from_json_file("add_item.json")
 except Exception:
     old_data = []
 
