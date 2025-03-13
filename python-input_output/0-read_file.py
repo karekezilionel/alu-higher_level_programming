@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """defining read_file function"""
 
 def read_file(filename=""):
