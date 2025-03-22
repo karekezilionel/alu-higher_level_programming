@@ -1,11 +1,3 @@
 #!/bin/bash
-# A script that takes a URL, sends a request, and displays the size of the response body in bytes.
-
-if [ -z "$1" ]; then
-    echo "Usage: $0 <URL>"
-    exit 1
-fi
-
-# Use curl to fetch the URL and measure the response body size
-curl -s "$1" | wc -c
-
+# A script that takes a URL, sends a GET request, and displays the body of the response only if the status code is 200.
+curl -sL -w "%{http_code}" "$1" -o temp && [ "$(cat temp | tail -c 3)" = "200" ] && head -c -3 temp
