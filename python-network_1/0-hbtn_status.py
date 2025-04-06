@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""Fetches a URL and displays specific info about the response body."""
-
 import urllib.request
 
-if __name__ == "__main__":
-    url = "https://intranet.hbtn.io/status"
+url = "https://alu-intranet.hbtn.io/status"
 
+try:
     with urllib.request.urlopen(url) as response:
-        content = response.read()
+        body = response.read().decode('utf-8')
         print("Body response:")
-        print("\t- type:", type(content))
-        print("\t- content:", content)
-        print("\t- utf8 content:", content.decode("utf-8"))
+        print("\t- {}".format(body))
+except urllib.error.URLError as e:
+    print(f"Error fetching URL: {e}")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
