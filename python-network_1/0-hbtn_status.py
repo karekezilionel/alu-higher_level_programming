@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Fetches a URL and displays specific info about the response body."""
+
 import urllib.request
 
 if __name__ == "__main__":
