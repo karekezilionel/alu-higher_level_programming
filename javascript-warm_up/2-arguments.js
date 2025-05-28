@@ -8,4 +8,3 @@ if (argCount === 0) {
 } else {
   console.log('Arguments found');
 }
-
